@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hHaxJ9GquxSsDWsHmxBRXSnoQd0x9UGCLUL+TK2GOA/D+PtRiIwrhJ06QaXQmd1h6OAWdqDry4kvTxuZdBF+jw==",
+  "dgSpecHash": "ynDJcSkiwalR0/tfXuNfIm5HzAb5SUv167qItx8yhXr+4wxDD8gR9tTkgoA7Yr+K8ujPmWvX4Pki8DnwK+hbKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juanj\\source\\repos\\NasaSchool\\NasaSchool.csproj",
+  "projectFilePath": "C:\\Users\\juanj\\Source\\Repos\\NasaSchool1.2\\NasaSchool.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanj\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\juanj\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.17\\microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juanj\\source\\repos\\NasaSchool\\NasaSchool.csproj": {}
+    "C:\\Users\\juanj\\Source\\Repos\\NasaSchool1.2\\NasaSchool.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juanj\\source\\repos\\NasaSchool\\NasaSchool.csproj": {
+    "C:\\Users\\juanj\\Source\\Repos\\NasaSchool1.2\\NasaSchool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juanj\\source\\repos\\NasaSchool\\NasaSchool.csproj",
+        "projectUniqueName": "C:\\Users\\juanj\\Source\\Repos\\NasaSchool1.2\\NasaSchool.csproj",
         "projectName": "NasaSchool",
-        "projectPath": "C:\\Users\\juanj\\source\\repos\\NasaSchool\\NasaSchool.csproj",
+        "projectPath": "C:\\Users\\juanj\\Source\\Repos\\NasaSchool1.2\\NasaSchool.csproj",
         "packagesPath": "C:\\Users\\juanj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juanj\\source\\repos\\NasaSchool\\obj\\",
+        "outputPath": "C:\\Users\\juanj\\Source\\Repos\\NasaSchool1.2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
