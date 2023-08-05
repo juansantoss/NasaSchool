@@ -10,6 +10,24 @@
     </div>
     <br />
 
+    @if (TempData["SucessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn-danger btn-sm close-alert" ariel-label="Close"> X </button>
+            @TempData["SucessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn-danger btn-sm close-alert" ariel-label="Close"> X </button>
+        </div>
+    }
+
+    <br />
+
+
     <h1 class="display-4">Students List</h1>
 
     <table class="table table-dark table-hover">
@@ -27,7 +45,7 @@
             @if (Model != null && Model.Any())
             {
                 foreach (StudentModel student in Model)
-                {  
+                {
                     <tr>
                         <th scope="row">@student.Id</th>
                         <td>@student.FullName</td>
@@ -36,7 +54,7 @@
                         <td>
                             <div class="btn-group" role="group">
                                 <a role="button" class="btn btn-primary" asp-route-id="@student.Id" asp-controller="Student" asp-action="Edit">Edit</a>
-                                <a role="button" class="btn btn-danger"  asp-route-id="@student.Id" asp-controller="Student" asp-action="DeleteConfirm">Delete</a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@student.Id" asp-controller="Student" asp-action="DeleteConfirm">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -45,6 +63,6 @@
         </tbody>
     </table>
 
-    
+
 </div>
 

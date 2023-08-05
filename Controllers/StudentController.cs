@@ -39,28 +39,72 @@ namespace NasaSchool.Controllers
 
         public IActionResult Delete(int id)
         {
-            _studentRepository.Delete(id);
-            return RedirectToAction("Index");
+            try
+            {
+                bool deleted = _studentRepository.Delete(id);
+
+                if (deleted)
+                {
+                    TempData["SucessMessage"] = "student deleted successfully";
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = $"Unable to delete student, please try again";
+                }
+                return RedirectToAction("Index");
+            }
+            catch (System.Exception erro)
+            {
+                TempData["ErrorMessage"] = $"Unable to delete student, please try again, error message: {erro.Message}";
+                return RedirectToAction("Index");
+            }
+
         }
 
         [HttpPost]
         public IActionResult Add(StudentModel student)
         {
-            if (ModelState.IsValid)
+            try 
             {
-                _studentRepository.Add(student);
+                if (ModelState.IsValid)
+                {
+                    _studentRepository.Add(student);
+                    TempData["SucessMessage"] = "successfully registered student";
+                    return RedirectToAction("Index");
+                }
+
+                return View(student);
+            }
+            catch (System.Exception erro)
+            {
+                TempData["ErrorMessage"] = $"it was not possible to register the student try againt, error message: {erro.Message}" ;
                 return RedirectToAction("Index");
             }
-
-            return View(student);
             
         }
 
         [HttpPost]
         public IActionResult Alterar(StudentModel student)
         {
-            _studentRepository.Atualizar(student);
-            return RedirectToAction("Index");
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _studentRepository.Atualizar(student);
+                    TempData["SucessMessage"] = "success in updating student";
+                    return RedirectToAction("Index");
+                }
+
+                return View("Editar", student);
+            }
+
+            catch (System.Exception erro)
+            {
+                TempData["ErrorMessage"] = $"unable to update student please try again, error message: {erro.Message}";
+                return RedirectToAction("Index");
+            }
+
         }
     }
 }
